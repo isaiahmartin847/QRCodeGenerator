@@ -1,0 +1,12 @@
+
+
+.title {
+    display: flex;
+    background-color: cadetblue;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
