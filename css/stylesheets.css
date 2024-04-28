@@ -1,14 +1,18 @@
-
-
+:root {
+    --primary-blue: #285185;
+    --secondary-blue: #CCD9E2;
+    --brown: #D67940;
+    --main: #F6F4F9; 
+}
 .title {
     display: flex;
-    background-color: cadetblue;
+    background-color: var(--primary-blue);
     justify-content: center;
     text-align: center;
 }
 
 h1 {
-    color: white;
+    color: var(--main);
 }
 
 .form-div {
