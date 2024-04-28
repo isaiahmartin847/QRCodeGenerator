@@ -5,12 +5,20 @@
     --brown: #D67940;
     --main: #F6F4F9; 
 }
+
+body {
+    background-color: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+
 .title {
     display: flex;
     background-color: var(--secondary-blue);
     justify-content: center;
     text-align: center;
 }
+
+
 
 h1 {
     color: var(--main);
@@ -57,5 +65,10 @@ form {
     width: 100px;
     background-color: var(--brown);
     columns: var(--main);
+    font-size: medium;
+    border-radius: 20px;
+}
+
+label {
     font-size: medium;
 }
