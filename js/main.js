@@ -1,14 +1,18 @@
-const script = document.createElement('script');
-
-// Set the source URL to load the QRCode.js library
-script.src = 'https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js';
-
-// Define a function to execute when the script is loaded
-script.onload = () => {
-    // Now you can use the QRCode.js library
-    console.log('QRCode.js has been loaded.');
-};
-let qrcode = new QRCode("qrcode");
+console.log("the js has loaded")
 
 
-document.body.appendChild(script);
+const form = document.getElementById("qr-code-form")
+const data = document.getElementById("qr-code-data")
+const size = document.getElementById("dropdown")
+
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    if(!data.value || size.value) {
+        alert("please fill out the form")
+    }
+    console.log(size.value)
+
+
+    console.log("form sumbitted")
+})

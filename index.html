@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>QR Code</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/stylesheets.css">
@@ -19,11 +19,19 @@
         </div>
 
         <div class="form-div">
-            <form>
-                <label>Put in the url or data</label>
-                <input type="text">
-                <!-- <select></select> -->
-            </form>
+            <div class="form">
+                <form id="qr-code-form">
+                    <label>Put in the url or data</label>
+                    <input type="text" id="qr-code-data">
+                    <select id="dropdown">
+                        <option value="null">Select Size</option>
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select>
+                    <input type="submit">
+                </form>
+            </div>
         </div>
 
 

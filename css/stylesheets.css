@@ -10,3 +10,21 @@
 h1 {
     color: white;
 }
+
+.form-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
