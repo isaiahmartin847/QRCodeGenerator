@@ -1,12 +1,13 @@
 :root {
     --primary-blue: #285185;
-    --secondary-blue: #CCD9E2;
+    --secondary-blue: #92c2e4;
+    --third-blue: #4882cf;
     --brown: #D67940;
     --main: #F6F4F9; 
 }
 .title {
     display: flex;
-    background-color: var(--primary-blue);
+    background-color: var(--secondary-blue);
     justify-content: center;
     text-align: center;
 }
@@ -31,4 +32,30 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
+}
+
+#qr-code-data {
+    background-color: var(--third-blue);
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 75%;
+    border-color: #92c2e4;
+}
+
+
+#dropdown {
+    background-color: #285185;
+    color: var(--main);
+    width: fit-content;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+#submit {
+    width: 100px;
+    background-color: var(--brown);
+    columns: var(--main);
+    font-size: medium;
 }
