@@ -8,11 +8,9 @@ const size = document.getElementById("dropdown")
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
-    if(!data.value || size.value) {
-        alert("please fill out the form")
+    if(!data.value || size.value === "null") {
+        alert("please finish filling out the form")
     }
-    console.log(size.value)
 
-
-    console.log("form sumbitted")
+    
 })

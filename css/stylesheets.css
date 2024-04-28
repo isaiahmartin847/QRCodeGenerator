@@ -43,6 +43,7 @@ form {
 }
 
 #qr-code-data {
+    border: 2px solid black;
     background-color: var(--third-blue);
     height: 30px;
     color: white;
