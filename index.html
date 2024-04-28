@@ -20,18 +20,17 @@
 
         <div class="form-div">
             <div class="form">
-                <form id="qr-code-form">
-                    <label>Put in the url or data</label>
-                    <input type="text" id="qr-code-data">
-                    <label>Size</label>
-                    <select id="dropdown">
-                        <option value=null >Select Size</option>
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                    </select>
-                    <input id="submit" type="submit">
-                </form>
+                <form id="qr-code-form">                   
+                        <label>Put in the url or data</label>
+                        <input type="text" id="qr-code-data">
+                        <label>Size</label>
+                        <div class="range">
+                            <label>small</label>
+                            <input type="range" min="1" max="3" value="50" class="slider" id="myRange">
+                            <label>large</label>
+                        </div>
+                        <input id="submit" type="submit">
+                    </form>
             </div>
         </div>
 

@@ -6,22 +6,22 @@
     --main: #F6F4F9; 
 }
 
-body {
-    background-color: linear-gradient(to right, #ff7e5f, #feb47b);
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 
 .title {
-    display: flex;
-    background-color: var(--secondary-blue);
-    justify-content: center;
-    text-align: center;
+    background-color: #4882cf;
+    width: 100vw;
 }
 
 
 
 h1 {
-    color: var(--main);
+    /* color: var(--main); */
 }
 
 .form-div {
@@ -30,46 +30,64 @@ h1 {
     justify-content: center;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    width: 50%;
-}
-
 form {
     display: flex;
     flex-direction: column;
+    border: 2px solid black;
+    width: 50vw;
 }
 
 #qr-code-data {
-    border: 2px solid black;
-    background-color: var(--third-blue);
     height: 30px;
-    color: white;
     font-size: 20px;
     border-radius: 20px;
     width: 75%;
-    border-color: #92c2e4;
+
 }
 
 
-#dropdown {
-    background-color: #285185;
-    color: var(--main);
-    width: fit-content;
-    padding: 4px;
-    border-radius: 20px;
-}
 
 #submit {
-    width: 100px;
+    margin-top: 10px;
+    height: 35px;
+    width: 150px;
     background-color: var(--brown);
     columns: var(--main);
     font-size: medium;
     border-radius: 20px;
 }
 
-label {
-    font-size: medium;
+
+
+input, label, select {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
+
+
+label {
+    font: bold;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+
+  .range {
+    display: flex;
+
+  }
