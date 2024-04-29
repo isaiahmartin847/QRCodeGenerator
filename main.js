@@ -4,6 +4,9 @@ const data = document.getElementById("qr-code-data")
 const toggle = document.getElementById("toggle");
 const emptyBtn = document.getElementById("empty-form-btn")
 const imgUrl = document.getElementById("qr-code-img")
+const qrCodeDiv = document.getElementById("qr-code-div")
+const downlaodBtn = document.getElementById("download-btn")
+const size = ["150", "250", "350"]
 
 
 // toggle.style.display = "block"
@@ -15,7 +18,6 @@ form.addEventListener("submit", (event) => {
         toggle.style.display = "block"
         return 
     }
-    console.log(slider.value)
     getQRCode()
 
 
@@ -30,7 +32,7 @@ emptyBtn.addEventListener("click", () => {
 
 
 const getQRCode = () => {
-    fetch(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${data.value}`)
+    fetch(`https://api.qrserver.com/v1/create-qr-code/?size=${size[slider.value]}x${size[slider.value]}&data=${data.value}`)
     .then(res => {
         if(!res.ok) {
             console.error("unable to the the qr code")
@@ -41,6 +43,11 @@ const getQRCode = () => {
         imgUrl.src = ""
         const objUrl = URL.createObjectURL(blob);
         imgUrl.src = objUrl
+        imgUrl.style.width = `${size[slider.value]}px`
+        
 
+        downlaodBtn.href = objUrl
+        qrCodeDiv.style.display = "flex"
     })
 } 
+

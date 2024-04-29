@@ -1,9 +1,9 @@
 :root {
     --primary-blue: #4882cf;
-    --secondary-blue: #92c2e4;
-    --third-blue: #4882cf;
-    --brown: #D67940;
-    --main: #F6F4F9; 
+    --hover-blue: #4883cfb1;
+    --purple: #9a42c2;
+    --hover-purple: #9942c2af;
+
 }
 
 * {
@@ -61,10 +61,10 @@ form {
     margin-top: 10px;
     height: 35px;
     width: 150px;
-    background-color: var(--third-blue);
+    background-color: var(--primary-blue);
     columns: var(--main);
     font-size: medium;
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
     font-weight: bold;
     
@@ -133,14 +133,55 @@ label {
 }
 
 #empty-form-btn {
-    background-color: #9a42c2;
+    background-color: var(--purple);
     color: white;
     padding: 10px 20px 10px 20px;
-    border-radius: 14%;
+    border-radius: 10px;
     margin-top: 10px;
+}
+
+#empty-form-btn:hover {
+    background-color: var(--hover-purple);
 }
 
 
 #toggle {
     display: none;
 }
+
+#qr-code-div {
+    margin-top: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#download-btn{
+    border: solid 2px #0000005a;
+    width: fit-content;
+    background-color: var(--primary-blue);
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+#download-btn:hover {
+    background-color: var(--hover-blue);
+}
+
+
+#submit:hover {
+    background-color: var(--hover-blue);
+    cursor: pointer;
+}
+
+
+
+
