@@ -1,5 +1,5 @@
 :root {
-    --primary-blue: #285185;
+    --primary-blue: #4882cf;
     --secondary-blue: #92c2e4;
     --third-blue: #4882cf;
     --brown: #D67940;
@@ -14,14 +14,19 @@
 
 
 .title {
-    background-color: #4882cf;
+    background-color: var(--primary-blue);
     width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
 }
 
 
 
-h1 {
-    /* color: var(--main); */
+.title h1 {
+    color: var(--main);
 }
 
 .form-div {
@@ -35,6 +40,8 @@ form {
     flex-direction: column;
     border: 2px solid black;
     width: 50vw;
+    padding: 35px;
+    box-shadow: 3px 3px 3px #0000003d;
 }
 
 #qr-code-data {
@@ -42,7 +49,10 @@ form {
     font-size: 20px;
     border-radius: 20px;
     width: 75%;
-
+    border: 1px solid black;
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: 15px;
 }
 
 
@@ -51,10 +61,13 @@ form {
     margin-top: 10px;
     height: 35px;
     width: 150px;
-    background-color: var(--brown);
+    background-color: var(--third-blue);
     columns: var(--main);
     font-size: medium;
     border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    
 }
 
 
@@ -89,5 +102,45 @@ label {
 
   .range {
     display: flex;
-
   }
+
+#large-label {
+    margin-right: 18%;
+}
+
+#small-label {
+    margin-left: 18%;
+}
+
+#empty-form-div {
+    display: none;
+    width:  300px;
+    height: 200px;
+    border: black solid 2px;
+    border-radius: 10px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+#empty-form-div, h2, button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#empty-form-btn {
+    background-color: #9a42c2;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 14%;
+    margin-top: 10px;
+}
+
+
+#toggle {
+    display: none;
+}
