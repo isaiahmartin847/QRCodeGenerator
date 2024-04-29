@@ -3,6 +3,7 @@ const form = document.getElementById("qr-code-form")
 const data = document.getElementById("qr-code-data")
 const toggle = document.getElementById("toggle");
 const emptyBtn = document.getElementById("empty-form-btn")
+const imgUrl = document.getElementById("qr-code-img")
 
 
 // toggle.style.display = "block"
@@ -15,17 +16,31 @@ form.addEventListener("submit", (event) => {
         return 
     }
     console.log(slider.value)
+    getQRCode()
+
+
 
 })
-
-
-// this sets the value of the slider  
-slider.oninput = function() {
-    
-  }
-
 
 
 emptyBtn.addEventListener("click", () => {
     toggle.style.display = "none"
 })
+
+
+
+const getQRCode = () => {
+    fetch(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${data.value}`)
+    .then(res => {
+        if(!res.ok) {
+            console.error("unable to the the qr code")
+        }
+        return res.blob()
+    })
+    .then(blob => {
+        imgUrl.src = ""
+        const objUrl = URL.createObjectURL(blob);
+        imgUrl.src = objUrl
+
+    })
+} 
